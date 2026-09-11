@@ -1,185 +1,1152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday hon you better get the lube ready🫦</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      color: #fff;
-      background: url('https://i.postimg.cc/k4Fc9pMw/a120eb6391b1d72264cabd8dcaa36214.jpg') no-repeat center center fixed;
-      background-size: cover;
-      overflow-x: hidden;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Very Important Birthday 💗</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Patrick+Hand&display=swap');
+
+
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    color: #4b3b4f;
+    background: #f8eaf3;
+}
+
+
+/* =========================================
+   GENERAL SECTION
+========================================= */
+
+section {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 90px 20px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND IMAGES
+========================================= */
+
+/*
+   CHANGE THESE FOUR IMAGES!
+
+   background1.jpg = opening
+   background2.jpg = letter
+   background3.jpg = memories
+   background4.jpg = ending
+*/
+
+.hero {
+    background-image:
+        linear-gradient(
+            rgba(70, 40, 70, .25),
+            rgba(70, 40, 70, .25)
+        ),
+        url("background1.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.letter-section {
+    background-image:
+        linear-gradient(
+            rgba(255, 220, 240, .75),
+            rgba(235, 220, 255, .75)
+        ),
+        url("background2.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.memories-section {
+    background-image:
+        linear-gradient(
+            rgba(240, 220, 245, .65),
+            rgba(210, 225, 255, .65)
+        ),
+        url("background3.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.final-section {
+    background-image:
+        linear-gradient(
+            rgba(80, 45, 90, .4),
+            rgba(80, 45, 90, .4)
+        ),
+        url("background4.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================================
+   GLASS CARD
+========================================= */
+
+.glass {
+    width: min(850px, 94vw);
+
+    padding: 50px 35px;
+
+    background: rgba(255,255,255,.72);
+
+    border: 2px solid rgba(255,255,255,.8);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 30px 80px rgba(60,35,70,.25);
+
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-content {
+    color: white;
+
+    text-align: center;
+
+    max-width: 800px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.tiny {
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: .8rem;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+
+    font-family: "Pacifico", cursive;
+
+    font-size:
+        clamp(3.5rem, 12vw, 8rem);
+
+    line-height: 1;
+
+    margin: 0;
+
+    text-shadow:
+        4px 5px 0 rgba(200,120,170,.8),
+        0 15px 35px rgba(0,0,0,.25);
+
+    animation:
+        wiggle 4s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+
+    0%,100% {
+        transform: rotate(-2deg);
     }
 
-    h1 {
-      margin-top: 30px;
-      font-size: 3.5em;
-      font-weight: 700;
-      background: linear-gradient(45deg, #ff6ec4, #7873f5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(255,255,255,0.7);
+    50% {
+        transform: rotate(2deg) scale(1.03);
+    }
+}
+
+.hero-subtitle {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 1.7rem;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: .9rem;
+
+    animation:
+        bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,100% {
+        transform:
+            translate(-50%,0);
     }
 
-    p {
-      font-size: 1.3em;
-      margin: 15px auto;
-      max-width: 800px;
-      line-height: 1.8;
-      background: rgba(0,0,0,0.4);
-      padding: 15px;
-      border-radius: 12px;
+    50% {
+        transform:
+            translate(-50%,10px);
     }
+}
 
-    /* Image gallery */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 30px auto;
-      gap: 15px;
-      max-width: 1000px;
-    }
-    .gallery img {
-      width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
 
-    /* Button */
-    button {
-      margin: 25px;
-      padding: 12px 24px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: linear-gradient(45deg, #ff6ec4, #7873f5);
-      color: #fff;
-      font-weight: bold;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255,255,255,0.4);
-    }
+/* =========================================
+   SECTION TITLES
+========================================= */
 
-    /* Hidden surprise message */
-    #surprise {
-      font-size: 1.5em;
-      margin: 20px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-      background: rgba(0,0,0,0.5);
-      padding: 20px;
-      border-radius: 12px;
-    }
-    #surprise.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.section-title {
 
-    /* Confetti */
-    .confetti {
-      position: absolute;
-      width: 8px;
-      height: 14px;
-      top: -20px;
-      opacity: 0.9;
-      border-radius: 2px;
-      animation: fall linear forwards;
-    }
-    @keyframes fall {
-      to {
-        transform: translateY(110vh) rotateZ(360deg);
+    font-family: "Pacifico", cursive;
+
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+
+    color: #d878a8;
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+.section-intro {
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   LETTER
+========================================= */
+
+.letter {
+
+    text-align: left;
+
+    max-width: 650px;
+
+    margin: 30px auto 0;
+
+    padding: 35px;
+
+    background:
+        #fffafc;
+
+    border-radius: 20px;
+
+    box-shadow:
+        5px 8px 0 rgba(210,130,175,.25);
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 1.35rem;
+
+    line-height: 1.7;
+
+    transform: rotate(-.5deg);
+}
+
+.letter::before {
+
+    content: "💌";
+
+    display: block;
+
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   MEMORY PHOTOS
+========================================= */
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.photo {
+
+    background: white;
+
+    padding: 10px 10px 35px;
+
+    box-shadow:
+        0 15px 30px rgba(60,35,70,.2);
+
+    transition: .3s;
+
+    position: relative;
+}
+
+.photo:nth-child(1) {
+    transform: rotate(-5deg);
+}
+
+.photo:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.photo:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+.photo:hover {
+
+    transform:
+        rotate(0)
+        scale(1.05);
+
+    z-index: 10;
+}
+
+.photo img {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.photo p {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 1.2rem;
+
+    margin: 8px 0 0;
+}
+
+
+/* =========================================
+   RANDOM LITTLE FACTS
+========================================= */
+
+.fact-box {
+
+    margin: 40px auto 0;
+
+    max-width: 600px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd9eb,
+            #e5dcff
+        );
+
+    box-shadow:
+        0 15px 30px rgba(70,40,80,.15);
+}
+
+.fact-box h3 {
+
+    margin-top: 0;
+
+    font-family:
+        "Pacifico",
+        cursive;
+
+    color: #b96794;
+}
+
+
+/* =========================================
+   SURPRISE BUTTON
+========================================= */
+
+.surprise-button {
+
+    border: none;
+
+    padding: 18px 30px;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    font-size: 1rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9fca,
+            #bda8ff
+        );
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(100,50,100,.2);
+
+    transition: .2s;
+}
+
+.surprise-button:hover {
+
+    transform:
+        scale(1.07)
+        rotate(-2deg);
+}
+
+#surprise {
+
+    display: none;
+
+    margin-top: 25px;
+
+    font-family:
+        "Pacifico",
+        cursive;
+
+    font-size: 1.8rem;
+
+    color: #d66c9e;
+}
+
+#surprise.show {
+    display: block;
+
+    animation:
+        pop .5s ease;
+}
+
+@keyframes pop {
+
+    from {
         opacity: 0;
-      }
+        transform: scale(.5);
     }
-  </style>
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final-content {
+
+    color: white;
+
+    text-align: center;
+
+    max-width: 750px;
+}
+
+.final-content h2 {
+
+    font-family:
+        "Pacifico",
+        cursive;
+
+    font-size:
+        clamp(3rem, 10vw, 6rem);
+
+    margin: 0 0 20px;
+
+    text-shadow:
+        0 8px 25px rgba(0,0,0,.3);
+}
+
+.final-content p {
+
+    font-size: 1.3rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FLOATING DECORATIONS
+========================================= */
+
+.decoration {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation:
+        floatAround 5s ease-in-out infinite;
+}
+
+@keyframes floatAround {
+
+    0%,100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(5deg);
+    }
+}
+
+.d1 {
+    top: 10%;
+    left: 7%;
+    font-size: 35px;
+}
+
+.d2 {
+    top: 20%;
+    right: 8%;
+    font-size: 25px;
+    animation-delay: 1s;
+}
+
+.d3 {
+    bottom: 15%;
+    left: 10%;
+    font-size: 30px;
+    animation-delay: 2s;
+}
+
+.d4 {
+    bottom: 10%;
+    right: 10%;
+    font-size: 40px;
+    animation-delay: .5s;
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+#musicButton {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+
+    z-index: 100;
+
+    border: none;
+
+    padding: 13px 18px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,.85);
+
+    color: #925c80;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(50,30,70,.2);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti {
+
+    position: fixed;
+
+    top: -20px;
+
+    z-index: 200;
+
+    pointer-events: none;
+
+    animation:
+        fall 3s linear forwards;
+}
+
+@keyframes fall {
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 70px 15px;
+    }
+
+    .glass {
+        padding: 35px 20px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        max-width: 280px;
+        margin: auto;
+    }
+
+    .letter {
+        padding: 25px;
+        font-size: 1.2rem;
+    }
+
+}
+
+</style>
 </head>
+
+
 <body>
-  <h1>🎉 Happy Birthday, my baby❤️🎉</h1>
 
-  <p>
-    Happy birthday my lovely gorgeous delicate queen I want you to party and shake your butt like there's no tomorrow today sweetie💋❤️
-  </p>
 
-  <!-- Picture gallery -->
-  <div class="gallery">
-    <img src=https://i.postimg.cc/cHHq8wKR/533e26a3852572241acaa9a45e8bc1c2-1.jpg" alt="Pic 1">
-    <img src="https://i.postimg.cc/Yqj1y9Fd/63225a8b0f8fa0c849a9aa260046d6b9.jpg" alt="Pic 2">
-    <img src="https://i.postimg.cc/zv2TGmsw/85909c4274540c4f4412c550e68d4ddd.jpg" alt="Pic 3">
-  </div>
+<!-- =========================================
+     HERO
+========================================= -->
 
-  <button onclick="showSurprise()">Click for a big veiny dih</button>
+<section class="hero">
 
-  <div id="surprise">I wanna fuck you hard on the sink🫦, you don't know much I love your goofy ass your plump hot ass and boobs I wanna squeeze them😩, but really joking aside I love you wish you a happy birth day even if we can't celebrate together I know someday we will and I know things are hard but it will get better trust me everything will be OK not everything in life is going to go smoothly we get to face some roadblocks sometimes but we can't stop because of them I know that you'll be something great one day and just know that I will always have your back no matter what even if it isn't much really,BTW I'm always watching everything you do you say every detail every breath I'm In your walls you can't escape me I'm not just one person I'm always watching waiting you'll never know, I know we don't talk much anymore I can be boring and dumb sometimes I'm not exactly the best friend I'm just plane but I really try to improve myself and I appreciate that you didn't just abandon me like everyone else you're probably the only person I can talk like this with I don't have many friends even the ones I have are just surface level friendships you're more of a brother to me I always wanted a brother of course I never had one but I had you I'm happy to be your friend
+    <div class="decoration d1">✦</div>
+    <div class="decoration d2">♡</div>
+    <div class="decoration d3">✧</div>
+    <div class="decoration d4">🎀</div>
 
-    Reasons why I love you:
-    1-you can crush my face with your thighs
 
-    2-you're adorable 
+    <div class="hero-content">
 
-    3-you like to see my dick and you think it's big
+        <div class="tiny">
+            a very important announcement
+        </div>
 
-    4-you call me daddy
+        <h1>
+            Happy Birthday!
+        </h1>
 
-    5-you like yaoi 
+        <div class="hero-subtitle">
+            ✨ yes, this entire website is about you ✨
+        </div>
 
-    6-you like lesbyans
+    </div>
 
-    7-you're nonchalant 
 
-    8-you're tall
+    <div class="scroll">
+        ↓ scroll down ↓
+    </div>
 
-    9-you have motion 
+</section>
 
-    10-you have man boobs
 
-    11-you like femboys
 
-    12-you are my sunshine 
+<!-- =========================================
+     LETTER
+========================================= -->
 
-    13-🗣️cause you are my medicine when you're close to me
+<section class="letter-section">
 
-    14-i like bbw's
+    <div class="glass">
 
-    Honorable mention - you're gay
+        <div class="decoration d1">🌷</div>
+        <div class="decoration d2">⭐</div>
 
-  <!-- Happy Birthday song -->
-  <audio autoplay loop>
-    <source src="https://github.com/maboaof160409-max/HappyBirthday-femboy/blob/main/birthday-song.mp3" type="audio/mpeg">
-  </audio>
+        <h2 class="section-title">
+            Okay, listen...
+        </h2>
 
-  <script>
-    // Confetti generator
-    function createConfetti() {
-      const confetti = document.createElement("div");
-      confetti.classList.add("confetti");
-      document.body.appendChild(confetti);
+        <p class="section-intro">
+            I could have just sent you a normal birthday message,
+            but apparently that wasn't enough.
+        </p>
 
-      confetti.style.left = Math.random() * window.innerWidth + "px";
-      confetti.style.backgroundColor = ["#ff0", "#0ff", "#f0f", "#fff", "#0f0", "#f00"][Math.floor(Math.random()*6)];
-      confetti.style.animationDuration = (3 + Math.random() * 3) //+ "s";
 
-      setTimeout(() => confetti.remove(), 6000);
+        <div class="letter">
+
+            Dear Birthday Person,
+
+            <br><br>
+
+            Happy birthday!! 💗
+
+            <br><br>
+
+            I hope you know how much you mean to the people
+            around you. I hope today gives you a little break
+            from everything and lets you just enjoy yourself.
+
+            <br><br>
+
+            You deserve good things. You deserve good memories.
+            You deserve cake. Probably an unreasonable amount
+            of cake, actually.
+
+            <br><br>
+
+            Anyway, this website exists because apparently
+            saying "happy birthday" normally wasn't dramatic
+            enough.
+
+            <br><br>
+
+            Have an amazing day. 🎀
+
+            <br><br>
+
+            — someone who clearly spent too much time making
+            this website
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MEMORIES
+========================================= -->
+
+<section class="memories-section">
+
+    <div class="glass">
+
+        <h2 class="section-title">
+            Little Memories 📸
+        </h2>
+
+        <p class="section-intro">
+            A tiny museum dedicated to some very important
+            moments.
+        </p>
+
+
+        <div class="photo-grid">
+
+            <!-- CHANGE THESE IMAGES -->
+
+            <div class="photo">
+
+                <img src="photo1.jpg">
+
+                <p>
+                    "this was actually a good day"
+                </p>
+
+            </div>
+
+
+            <div class="photo">
+
+                <img src="photo2.jpg">
+
+                <p>
+                    "proof that we occasionally behave"
+                </p>
+
+            </div>
+
+
+            <div class="photo">
+
+                <img src="photo3.jpg">
+
+                <p>
+                    "why do we look like this"
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="fact-box">
+
+            <h3>
+                ⭐ Extremely Important Information
+            </h3>
+
+            <p>
+                According to absolutely legitimate scientific
+                research, birthdays make you approximately
+                73% more powerful.
+            </p>
+
+            <p>
+                This statistic is completely made up.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SURPRISE
+========================================= -->
+
+<section class="letter-section">
+
+    <div class="glass">
+
+        <h2 class="section-title">
+            Wait...
+        </h2>
+
+        <p class="section-intro">
+
+            There's actually one more thing.
+
+        </p>
+
+        <br>
+
+        <button
+            class="surprise-button"
+            onclick="showSurprise()">
+
+            🎁 DO NOT PRESS THIS
+
+        </button>
+
+
+        <div id="surprise">
+
+            YOU PRESSED IT 😭
+
+            <br>
+
+            💗 HAPPY BIRTHDAY 💗
+
+            <br>
+
+            ⭐ YOU HAVE BEEN OFFICIALLY BIRTHDAY-IFIED ⭐
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL
+========================================= -->
+
+<section class="final-section">
+
+    <div class="decoration d1">✨</div>
+    <div class="decoration d2">🌸</div>
+    <div class="decoration d3">♡</div>
+    <div class="decoration d4">🎂</div>
+
+
+    <div class="final-content">
+
+        <h2>
+            One Last Thing 💗
+        </h2>
+
+        <p>
+            I hope this year gives you plenty of reasons
+            to laugh, explore, make stupid decisions,
+            create ridiculous memories, and be happy.
+        </p>
+
+        <p>
+            Happy birthday. 🎂✨
+        </p>
+
+        <p>
+            ♡ ♡ ♡
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MUSIC
+========================================= -->
+
+<audio
+    id="birthdayMusic"
+    loop
+    preload="auto">
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<button
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    🎵 Music
+
+</button>
+
+
+
+<script>
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+const music =
+    document.getElementById("birthdayMusic");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+let playing = false;
+
+
+function startMusic() {
+
+    if (playing)
+        return;
+
+    music.volume = .7;
+
+    music.play()
+        .then(() => {
+
+            playing = true;
+
+            musicButton.innerText =
+                "🎵 Music ON";
+
+        })
+        .catch(() => {});
+
+}
+
+
+/*
+   The first tap/click starts the music.
+*/
+
+document.addEventListener(
+    "click",
+    startMusic,
+    { once: true }
+);
+
+
+function toggleMusic() {
+
+    if (playing) {
+
+        music.pause();
+
+        playing = false;
+
+        musicButton.innerText =
+            "🔇 Music OFF";
+
+    } else {
+
+        startMusic();
+
     }
-    setInterval(createConfetti, 200);
 
-    // Surprise message toggle
-    function showSurprise() {
-      document.getElementById("surprise").classList.toggle("show");
+}
+
+
+/* =========================================
+   SURPRISE
+========================================= */
+
+function showSurprise() {
+
+    document
+        .getElementById("surprise")
+        .classList.add("show");
+
+    createConfetti();
+
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+function createConfetti() {
+
+    const things = [
+
+        "💗",
+        "✨",
+        "🎀",
+        "⭐",
+        "🌸",
+        "♡",
+        "🎂"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < 100;
+        i++
+    ) {
+
+        const piece =
+            document.createElement("div");
+
+        piece.className =
+            "confetti";
+
+        piece.innerText =
+            things[
+                Math.floor(
+                    Math.random()
+                    * things.length
+                )
+            ];
+
+        piece.style.left =
+            Math.random()
+            * 100
+            + "vw";
+
+        piece.style.fontSize =
+            Math.random() * 15
+            + 10
+            + "px";
+
+        piece.style.animationDuration =
+            Math.random() * 2
+            + 2
+            + "s";
+
+        document.body.appendChild(piece);
+
+
+        setTimeout(() => {
+
+            piece.remove();
+
+        }, 4500);
+
     }
-  </script>
+
+}
+
+</script>
+
 </body>
-</html>
+  </html>
